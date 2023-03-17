@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:rcipe_app/core/constant/app_assets.dart';
 import 'package:rcipe_app/presentation/widgets/splash/splash_text.dart';
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({Key? key}) : super(key: key);
@@ -43,7 +44,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Image(image:  AssetImage(AssetsImages.splashImage),),
+          const Image(image:  AssetImage(AppAssets.kSplashImage),),
           SlidingText(slidingAnimation: slidingAnimation),
         ],
       ),
