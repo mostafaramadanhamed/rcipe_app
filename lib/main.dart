@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Recipe App',
       onGenerateRoute: (setting)=>generateRoute(setting),
       home:const SplashView() ,

@@ -18,8 +18,8 @@ class SlidingText extends StatelessWidget {
           return SlideTransition(
             position: slidingAnimation,
             child: const Text(
-              AppString.kAppName,style: TextStyle(
-              fontSize: 27,
+              AppString.kSplashText,style: TextStyle(
+              fontSize: 40,
               color: Colors.white,
               fontWeight: FontWeight.w600,
             ),
