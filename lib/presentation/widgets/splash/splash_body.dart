@@ -1,11 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:food_rate/const/color.dart';
-import '../../../const/img.dart';
-import '../../../const/num.dart';
-import '../../enter/login_screen.dart';
-import 'slidin_text.dart';
-
+import 'package:rcipe_app/presentation/widgets/splash/splash_text.dart';
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({Key? key}) : super(key: key);
 
