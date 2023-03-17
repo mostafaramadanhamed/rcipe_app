@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:rcipe_app/core/constant/app_assets.dart';
+import 'package:rcipe_app/core/constant/app_numbers.dart';
+import 'package:rcipe_app/presentation/screens/home_screen.dart';
 import 'package:rcipe_app/presentation/widgets/splash/splash_text.dart';
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({Key? key}) : super(key: key);
@@ -13,7 +15,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
   late Animation<Offset> slidingAnimation;
-
   @override
   void initState() {
     super.initState();
@@ -31,23 +32,13 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   @override
   Widget build(BuildContext context) {
-    return Container(height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [
-            MyColor.primaryColor.shade100,
-            MyColor.primaryColor.shade200,
-            MyColor.primaryColor.shade300,
-            MyColor.primaryColor.shade400,
-          ])
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Image(image:  AssetImage(AppAssets.kSplashImage),),
-          SlidingText(slidingAnimation: slidingAnimation),
-        ],
-      ),
+    final size=MediaQuery.of(context).size;
+    return Stack(
+      children: [
+         Image(image:  const AssetImage(AppAssets.kSplashBackgroundImage,),width: size.width,height: size.height,),
+        const Center(child:  Image(image:  AssetImage(AppAssets.kSplashImage),)),
+        SlidingText(slidingAnimation: slidingAnimation),
+      ],
     );
   }
 
@@ -65,10 +56,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigateToReg() {
-    Timer(const Duration(milliseconds: Numbers.delayTime), ()
+    Timer(const Duration(milliseconds: AppNumbers.kMSDelayTime), ()
     {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => const Login()));
+      Navigator.pushReplacementNamed(context, HomeScreen.routeName);
     });
   }
 }
