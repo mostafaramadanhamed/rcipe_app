@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rcipe_app/core/constant/app_strings.dart';
+import 'package:rcipe_app/presentation/widgets/custom_text_field.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName='/home-screen';
@@ -11,33 +12,41 @@ class HomeScreen extends StatelessWidget {
   return Scaffold(
     backgroundColor: const Color(0xffFFFFFF),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: size.height/10,
-            ),
-            const Center(
-              child:  Text(AppString.kSearch,style: TextStyle(
-                fontSize: 22,
+        padding: const EdgeInsets.symmetric(horizontal: 30),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: size.height/10,
+              ),
+              const Center(
+                child:  Text(AppString.kSearch,style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w600,
+                ),),
+              ),
+              SizedBox(
+                height: size.height/20,
+              ),
+              const Text(AppString.kTitleBar,style:  TextStyle(
+                fontSize: 20,
                 fontWeight: FontWeight.w600,
               ),),
-            ),
-            SizedBox(
-              height: size.height/20,
-            ),
-            const Text(AppString.kTitleBar,style:  TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-            ),),  const  SizedBox(
-              height: 10,
-            ),
-            const Text(AppString.kSubTitleBar,style:  TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.normal,
-            ),)
-          ],
+              const  SizedBox(
+                height: 8,
+              ),
+              const Text(AppString.kSubTitleBar,style:  TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.normal,
+              ),),
+              SizedBox(
+                height: size.height/29,
+              ),
+              const CustomTextFiled(hint: AppString.kHintText),
+
+            ],
+          ),
         ),
       ),
     );

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../../core/constant/app_color.dart';
 class CustomTextFiled extends StatelessWidget {
   const CustomTextFiled({Key? key,
     this.onChange ,
@@ -15,32 +17,31 @@ class CustomTextFiled extends StatelessWidget {
   final TextInputType keyboardType;
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: TextFormField(
-        onChanged: onChange,
-        onSaved: onSaved,
-        keyboardType:keyboardType ,
-        validator: (val){
-          if(val?.isEmpty??true){
-            return 'Field is required';
-          }
-          else {
-            return null;
-          }
-        },
-        maxLines: maxLines,
-        cursorColor: AppColor.kPrimaryColor,
-        decoration: InputDecoration(
-          //  fillColor: SBackgroundColor,
-            hintText: hint,
-            hintStyle:const TextStyle(
-                color: AppColor.kPrimaryColor
-            ),
-            errorBorder:buildBorder(border: 16, color: AppColor.kPrimaryColor),
-            focusedBorder: buildBorder(border: 16, color: AppColor.kPrimaryColor),
-            enabledBorder: buildBorder(border: 16, color: AppColor.kPrimaryColor),
-            border:buildBorder(border: 16, color: Colors.grey)
-        ),
+    return TextFormField(
+      onChanged: onChange,
+      onSaved: onSaved,
+      keyboardType:keyboardType ,
+      validator: (val){
+        if(val?.isEmpty??true){
+          return 'Field is required';
+        }
+        else {
+          return null;
+        }
+      },
+      maxLines: maxLines,
+      cursorColor: AppColor.kCursorColor,
+      decoration: InputDecoration(
+      fillColor: AppColor.kTextFiledColor,
+          filled: true,
+          hintText: hint,
+          hintStyle:const TextStyle(
+              color: AppColor.kHintColor,
+            fontSize: 15,
+          ),
+          focusedBorder: buildBorder(border: 16, color: AppColor.kTextFiledBorderColor),
+          enabledBorder: buildBorder(border: 16, color: AppColor.kTextFiledBorderColor),
+          border:buildBorder(border: 16, color: Colors.grey)
       ),
     );
   }
