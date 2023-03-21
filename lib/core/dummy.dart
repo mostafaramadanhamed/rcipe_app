@@ -3,7 +3,7 @@ import '../data/models/recipe_model.dart';
 final List<Recipe> recipes = [
 Recipe(
 title: 'Chicken Parmesan',
-imageUrl: 'https://example.com/chicken-parmesan.jpg',
+imageUrl: 'https://img.freepik.com/free-photo/penne-with-roasted-chicken-wooden-bowl_114579-73703.jpg?w=1060&t=st=1679388448~exp=1679389048~hmac=263062c92b4faf8daa72d0688251143081dd692cc1da975a1aaace15e4b40e26',
 ingredients: [
 '4 boneless, skinless chicken breasts',
 '1 cup breadcrumbs',
@@ -29,7 +29,7 @@ duration: 45,
 ),
 Recipe(
 title: 'Spaghetti Carbonara',
-imageUrl: 'https://example.com/spaghetti-carbonara.jpg',
+imageUrl: 'https://img.freepik.com/premium-photo/tagliatelle-pasta-with-meatballs-tomato-sauce-thyme-sauce-light-grey-slate-stone-concrete-background-traditional-italian-dish-cuisine-top-view-with-copy-space_253362-13903.jpg?w=1060',
 ingredients: [
 '1 lb spaghetti',
 '4 oz pancetta, diced',
@@ -51,7 +51,7 @@ duration: 30,
 ),
 Recipe(
 title: 'Spaghetti with Meatballs',
-imageUrl: 'https://example.com/spaghetti-meatballs.jpg',
+imageUrl: 'https://img.freepik.com/free-photo/top-view-cooked-italian-pasta-with-meatballs-seasonings-dark-blue-surface_140725-61945.jpg?w=1060&t=st=1679388207~exp=1679388807~hmac=119530a03ac466b214ee1519130897c96b85d9f97ec9e58e51241019bb3ce51a',
 ingredients: [
 '1 pound spaghetti',
 '1 pound ground beef',
@@ -77,7 +77,7 @@ duration: 50,
 ),
   Recipe(
   title: 'Classic Lasagna',
-  imageUrl: 'https://example.com/lasagna.jpg',
+  imageUrl: 'https://img.freepik.com/free-photo/closeup-shot-lasagna-white-plate_181624-21968.jpg?w=1060&t=st=1679388307~exp=1679388907~hmac=71f01647fa4d1a2e7d4c26cc043b5688c27d450fff2b9f5b6ffa490817331a5f-',
   ingredients: [
     '1 pound ground beef',
     '1 pound Italian sausage',
