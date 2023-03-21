@@ -46,9 +46,6 @@ class HomeScreen extends StatelessWidget {
               height: size.height/29,
             ),
             const CustomTextFiled(hint: AppString.kHintText),
-            SizedBox(
-              height: size.height/29,
-            ),
              Expanded(child: RecipeGrid(recipes: recipes)),
           ],
         ),
