@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
   return Scaffold(
-    backgroundColor: const Color(0xffFFFFFF),
+
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Column(
@@ -50,6 +50,33 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class BookmarkScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text('Bookmark Screen'),
+    );
+  }
+}
+
+class FavoriteScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text('Favorite Screen'),
+    );
+  }
+}
+
+class AddScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text('Add Screen'),
     );
   }
 }

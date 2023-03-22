@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:rcipe_app/core/constant/app_assets.dart';
 import 'package:rcipe_app/core/constant/app_numbers.dart';
 import 'package:rcipe_app/presentation/screens/home_screen.dart';
+import 'package:rcipe_app/presentation/screens/main_screen.dart';
 import 'package:rcipe_app/presentation/widgets/splash/splash_text.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -78,7 +79,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void navigateToReg() {
     Timer(const Duration(milliseconds: AppNumbers.kMSDelayTime), () {
-      Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+      Navigator.pushReplacementNamed(context, MainScreen.routeName);
     });
   }
 }
