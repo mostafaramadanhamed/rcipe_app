@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: size.height/10,
+              height: size.height/12,
             ),
             const Center(
               child:  Text(AppString.kSearch,style: TextStyle(
@@ -54,14 +54,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-class BookmarkScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('Bookmark Screen'),
-    );
-  }
-}
+
 
 class FavoriteScreen extends StatelessWidget {
   @override

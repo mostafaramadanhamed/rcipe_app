@@ -7,4 +7,5 @@ class AppColor{
   static const kTextFiledBorderColor=Color(0xff00B4BF);
   static const kBottomNavBarColor=Color(0xffD9D9D9);
   static const kBottomNavBarItemColor=Color(0xff00B4BF);
+  static const kCategoryColor=Color(0xffF6F6F6);
 }
