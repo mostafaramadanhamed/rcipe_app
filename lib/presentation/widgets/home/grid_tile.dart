@@ -21,6 +21,7 @@ class RecipeGrid extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         Recipe recipe = recipes[index];
         return Card(
+          elevation: 4,
           color: AppColor.kTextFiledColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(22),
@@ -38,7 +39,7 @@ class RecipeGrid extends StatelessWidget {
                 Container(
                   clipBehavior: Clip.antiAliasWithSaveLayer,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16)
+                    borderRadius: BorderRadius.circular(16),
                   ),
                     child: Stack(
                   children: [
@@ -82,31 +83,3 @@ class RecipeGrid extends StatelessWidget {
     );
   }
 }
-/*
-Container(
-        //  alignment:Alignment.bottomCenter ,
-          clipBehavior: Clip.antiAliasWithSaveLayer,
-          decoration: BoxDecoration(
-            color: Colors.grey,
-              borderRadius: BorderRadius.circular(22),
-          image: DecorationImage(
-            alignment: Alignment.topCenter,
-            image:  NetworkImage(
-              recipe.imageUrl,
-            //  fit: BoxFit.cover,
-            ),
-          )),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-             children: [
-            Text(recipe.title),
-               Row(
-          children: [
-          Text('${recipe.calories} Kcal •'),
-          Text(' ${recipe.duration} mins'),
-          ],
-        ),
-             ],
-           ),
-        );
-* */
