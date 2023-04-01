@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rcipe_app/core/constant/app_color.dart';
 
 import 'category_screen.dart';
+import 'favorite_screen.dart';
 import 'home_screen.dart';
 
 class MainScreen extends StatefulWidget {

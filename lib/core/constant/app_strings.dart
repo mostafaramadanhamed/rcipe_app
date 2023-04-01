@@ -13,4 +13,5 @@ class AppString{
   static const kCategorySalads='Salads';
   static const kCategoryDesserts='Desserts';
   static const kCategorySoups='Soups';
+  static const kFavoriteTitle='Favorites';
 }

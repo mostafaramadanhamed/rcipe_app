@@ -3,6 +3,7 @@ import 'package:rcipe_app/core/constant/app_assets.dart';
 import 'package:rcipe_app/core/constant/app_color.dart';
 
 import '../../core/constant/app_strings.dart';
+import '../widgets/home/build_title.dart';
 
 class BookmarkScreen extends StatelessWidget {
    BookmarkScreen({Key? key}) : super(key: key);
@@ -34,12 +35,9 @@ final List<String>titles=[
           SizedBox(
             height: size.height/12,
           ),
-          const Center(
-            child:  Text(AppString.kCategoryTitle,style: TextStyle(
-              fontSize: 22,
-              fontWeight: FontWeight.w600,
-            ),),
-          ),
+      Center(
+        child: buildTextTitle(AppString.kCategoryTitle),
+      ),
           Expanded(
             child: ListView.builder(
              // physics: NeverScrollableScrollPhysics(),
