@@ -16,6 +16,9 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Recipe App',
+      theme: ThemeData(
+        fontFamily: 'Inter'
+      ),
       onGenerateRoute: (setting)=>generateRoute(setting),
       home:const SplashView() ,
     );

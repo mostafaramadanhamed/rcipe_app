@@ -21,7 +21,7 @@ class RecipeGrid extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         Recipe recipe = recipes[index];
         return Card(
-          elevation: 4,
+          elevation: 8,
           color: AppColor.kTextFiledColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(22),
@@ -35,6 +35,7 @@ class RecipeGrid extends StatelessWidget {
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
                   clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -59,9 +60,9 @@ class RecipeGrid extends StatelessWidget {
 
                   ],
                 )),
-           const SizedBox(height: 4),
-                Text(recipe.title, style: const TextStyle(fontSize: 13),maxLines: 2,overflow: TextOverflow.ellipsis,),
-              const SizedBox(height: 4),
+         //  const SizedBox(height: 4),
+                Text(recipe.title, style: const TextStyle(fontSize: 13,fontWeight: FontWeight.w500),maxLines: 2,overflow: TextOverflow.ellipsis,),
+            //  const SizedBox(height: 4),
 
                 Row(
                crossAxisAlignment: CrossAxisAlignment.end,
@@ -70,8 +71,9 @@ class RecipeGrid extends StatelessWidget {
                       fontSize: 9
                     ),),
                     const SizedBox(width: 15,),
-                    const Icon(Icons.watch_later_outlined,size: 13,),Text(' ${recipe.duration} min',style: const TextStyle(
-                        fontSize: 9
+                    const Icon(Icons.watch_later_outlined,size: 13,),
+                    Text(' ${recipe.duration} min',style: const TextStyle(
+                        fontSize: 9,
                     ),),
                   ],
                 ),
