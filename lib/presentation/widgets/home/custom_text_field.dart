@@ -40,7 +40,7 @@ class CustomTextFiled extends StatelessWidget {
             fontSize: 15,
           ),
           focusedBorder: buildBorder(border: 16, color: AppColor.kTextFiledBorderColor),
-          enabledBorder: buildBorder(border: 16, color: AppColor.kTextFiledBorderColor),
+          enabledBorder: buildBorder(border: 16, color: AppColor.kHintColor),
           border:buildBorder(border: 16, color: Colors.grey)
       ),
     );

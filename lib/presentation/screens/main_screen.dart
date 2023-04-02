@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rcipe_app/core/constant/app_color.dart';
+import 'package:rcipe_app/presentation/screens/new_recipe_screen.dart';
 
 import 'category_screen.dart';
 import 'favorite_screen.dart';
@@ -19,7 +20,7 @@ class _MainScreenState extends State<MainScreen> {
     const HomeScreen(),
     BookmarkScreen(),
     FavoriteScreen(),
-    AddScreen(),
+    NewRecipeScreen(),
   ];
   @override
   Widget build(BuildContext context) {

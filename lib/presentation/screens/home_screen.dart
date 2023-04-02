@@ -58,12 +58,3 @@ class HomeScreen extends StatelessWidget {
 
 
 
-
-class AddScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text('Add Screen'),
-    );
-  }
-}
