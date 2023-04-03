@@ -20,94 +20,98 @@ class RecipeGrid extends StatelessWidget {
       itemCount: recipes.length,
       itemBuilder: (BuildContext context, int index) {
         Recipe recipe = recipes[index];
-        return Card(
-          elevation: 8,
-          color: AppColor.kTextFiledColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(22),
-          ),
-          clipBehavior: Clip.antiAliasWithSaveLayer,
-          child: Padding(
-            padding: const EdgeInsets.only(
-              top: 8.0,
-              right: 8.0,
-              left: 8.0,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Container(
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: Stack(
-                      children: [
-                        Image.network(recipe.imageUrl),
-                        Positioned(
-                          top: 4,
-                          right: 6,
-                          child: Container(
-                              alignment: Alignment.center,
-                              height: 24,
-                              width: 22,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                color: Colors.white,
-                              ),
-                              child: const InkWell(
-                                  child: Icon(
-                                FontAwesomeIcons.heart,
-                                size: 16,
-                              ))),
-                        ),
-                      ],
-                    )),
-                //  const SizedBox(height: 4),
-                Text(
-                  recipe.title,
-                  style: const TextStyle(
-                      fontSize: 13, fontWeight: FontWeight.w500),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                //  const SizedBox(height: 4),
-
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                   const SizedBox(width: 3,), const Icon(
-                      FontAwesomeIcons.fireFlameCurved,
-                      color: AppColor.kIconColor,
-                      size: 13,
-                    ),
-                    Text(
-                      ' ${recipe.calories} Kcal ',
-                      style: const TextStyle(fontSize: 9,   color: AppColor.kTextInNewColor,),
-                    ),
-                    const SizedBox(
-                      width: 15,
-                    ),
-                    const Icon(
-                     FontAwesomeIcons.clock,
-                      color: AppColor.kIconColor,
-                      size: 13,
-                    ),
-                    Text(
-                      ' ${recipe.duration} min',
-                      style: const TextStyle(
-                        fontSize: 9,
-                        color: AppColor.kTextInNewColor,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-        );
+        return buildGridItem(recipe);
       },
     );
+  }
+
+  Widget buildGridItem(Recipe recipe) {
+    return Card(
+        elevation: 8,
+        color: AppColor.kTextFiledColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(22),
+        ),
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        child: Padding(
+          padding: const EdgeInsets.only(
+            top: 8.0,
+            right: 8.0,
+            left: 8.0,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Container(
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: Stack(
+                    children: [
+                      Image.network(recipe.imageUrl),
+                      Positioned(
+                        top: 4,
+                        right: 6,
+                        child: Container(
+                            alignment: Alignment.center,
+                            height: 24,
+                            width: 22,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              color: Colors.white,
+                            ),
+                            child: const InkWell(
+                                child: Icon(
+                              FontAwesomeIcons.heart,
+                              size: 16,
+                            ))),
+                      ),
+                    ],
+                  )),
+              //  const SizedBox(height: 4),
+              Text(
+                recipe.title,
+                style: const TextStyle(
+                    fontSize: 13, fontWeight: FontWeight.w500),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+              //  const SizedBox(height: 4),
+
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                 const SizedBox(width: 3,), const Icon(
+                    FontAwesomeIcons.fireFlameCurved,
+                    color: AppColor.kIconColor,
+                    size: 13,
+                  ),
+                  Text(
+                    ' ${recipe.calories} Kcal ',
+                    style: const TextStyle(fontSize: 9,   color: AppColor.kTextInNewColor,),
+                  ),
+                  const SizedBox(
+                    width: 15,
+                  ),
+                  const Icon(
+                   FontAwesomeIcons.clock,
+                    color: AppColor.kIconColor,
+                    size: 13,
+                  ),
+                  Text(
+                    ' ${recipe.duration} min',
+                    style: const TextStyle(
+                      fontSize: 9,
+                      color: AppColor.kTextInNewColor,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
   }
 }
