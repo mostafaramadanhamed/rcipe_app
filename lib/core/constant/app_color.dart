@@ -9,4 +9,5 @@ class AppColor{
   static const kBottomNavBarItemColor=Color(0xff00B4BF);
   static const kCategoryColor=Color(0xffF6F6F6);
   static const kTextInNewColor=Color(0xff6D6C6C);
+  static const kIconColor=Color(0xff868686);
 }

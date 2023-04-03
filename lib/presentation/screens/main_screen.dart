@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:rcipe_app/core/constant/app_color.dart';
 import 'package:rcipe_app/presentation/screens/new_recipe_screen.dart';
 
@@ -7,7 +8,7 @@ import 'favorite_screen.dart';
 import 'home_screen.dart';
 
 class MainScreen extends StatefulWidget {
-  static const routeName='/main-screen';
+  static const routeName = '/main-screen';
   const MainScreen({Key? key}) : super(key: key);
 
   @override
@@ -15,8 +16,8 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int   _currentIndex=0 ;
-  final List<Widget>pages=[
+  int _currentIndex = 0;
+  final List<Widget> pages = [
     const HomeScreen(),
     BookmarkScreen(),
     FavoriteScreen(),
@@ -27,23 +28,23 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-        color: AppColor.kBottomNavBarColor,
-        borderRadius: const BorderRadius.only(
-        topLeft: const Radius.circular(25.0),
-    topRight: Radius.circular(25.0),
-    ),
-    boxShadow: [
-    BoxShadow(
-    color: Colors.grey.withOpacity(0.22),
-    spreadRadius: 2,
-    blurRadius: 8,
-    offset: const Offset(0, -3),
-    ),
-    ],
-    ),
+          color: AppColor.kBottomNavBarColor,
+          borderRadius: const BorderRadius.only(
+            topLeft: Radius.circular(25.0),
+            topRight: Radius.circular(25.0),
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.22),
+              spreadRadius: 2,
+              blurRadius: 8,
+              offset: const Offset(0, -3),
+            ),
+          ],
+        ),
         child: BottomNavigationBar(
           elevation: 0,
-         backgroundColor:Colors.transparent,
+          backgroundColor: Colors.transparent,
           showSelectedLabels: false,
           showUnselectedLabels: false,
           type: BottomNavigationBarType.fixed,
@@ -52,40 +53,60 @@ class _MainScreenState extends State<MainScreen> {
           currentIndex: _currentIndex,
           onTap: (int index) {
             setState(() {
-               _currentIndex = index;
+              _currentIndex = index;
             });
           },
           items: [
             BottomNavigationBarItem(
-              icon: const Icon(Icons.home),
-              label: 'Home',
-              activeIcon: CircleAvatar(
-
-                  backgroundColor: AppColor.kBottomNavBarItemColor.withOpacity(.25),child:const Icon(Icons.home,color: Colors.black,), )
-            ),
-            BottomNavigationBarItem(
-              icon: const Icon(Icons.bookmark),
-              label: 'Bookmark',
+                icon: const Icon(FontAwesomeIcons.house),
+                label: 'Home',
                 activeIcon: CircleAvatar(
-
-                  backgroundColor: AppColor.kBottomNavBarItemColor.withOpacity(.25),
-                  child:const Icon(Icons.bookmark,color: Colors.black,), ),
+                  backgroundColor:
+                      AppColor.kBottomNavBarItemColor.withOpacity(.25),
+                  child: const Icon(
+                   FontAwesomeIcons.house,
+                    size: 20,
+                    color: Colors.black,
+                  ),
+                )),
+            BottomNavigationBarItem(
+              icon: const Icon(FontAwesomeIcons.bookmark),
+              label: 'Bookmark',
+              activeIcon: CircleAvatar(
+                backgroundColor:
+                    AppColor.kBottomNavBarItemColor.withOpacity(.25),
+                child: const Icon(
+                  FontAwesomeIcons.solidBookmark,
+                  size: 20,
+                  color: Colors.black,
+                ),
+              ),
             ),
             BottomNavigationBarItem(
-              icon: const Icon(Icons.favorite),
+              icon: const Icon(FontAwesomeIcons.heart),
               label: 'Favorite',
               activeIcon: CircleAvatar(
-
-                backgroundColor: AppColor.kBottomNavBarItemColor.withOpacity(.25),
-                child:const Icon(Icons.favorite,color: Colors.black,), ),
+                backgroundColor:
+                    AppColor.kBottomNavBarItemColor.withOpacity(.25),
+                child: const Icon(
+                  FontAwesomeIcons.solidHeart,
+                  size: 20,
+                  color: Colors.black,
+                ),
+              ),
             ),
             BottomNavigationBarItem(
-              icon: const Icon(Icons.add),
+              icon: const Icon(FontAwesomeIcons.plus),
               label: 'Add',
               activeIcon: CircleAvatar(
-
-                backgroundColor: AppColor.kBottomNavBarItemColor.withOpacity(.25),
-                child:const Icon(Icons.add,color: Colors.black,), ),
+                backgroundColor:
+                    AppColor.kBottomNavBarItemColor.withOpacity(.25),
+                child: const Icon(
+                  FontAwesomeIcons.plus,
+                  size: 20,
+                  color: Colors.black,
+                ),
+              ),
             ),
           ],
         ),
