@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ThemeData lightTheme=
     return ValueListenableBuilder<bool>(
       valueListenable: _isDarkMode,
       builder: (context, isDarkMode, child) {
