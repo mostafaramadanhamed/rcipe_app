@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:rcipe_app/core/constant/app_color.dart';
 import 'package:rcipe_app/presentation/screens/new_recipe_screen.dart';
+import 'package:rcipe_app/presentation/screens/setting_screen.dart';
 
 import 'category_screen.dart';
 import 'favorite_screen.dart';
@@ -22,6 +23,7 @@ class _MainScreenState extends State<MainScreen> {
     BookmarkScreen(),
     FavoriteScreen(),
     NewRecipeScreen(),
+    const SettingScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -56,56 +58,44 @@ class _MainScreenState extends State<MainScreen> {
               _currentIndex = index;
             });
           },
-          items: [
+          items: const [
             BottomNavigationBarItem(
-                icon: const Icon(FontAwesomeIcons.house),
+                icon: Icon(FontAwesomeIcons.house),
                 label: 'Home',
-                activeIcon: CircleAvatar(
-                  backgroundColor:
-                      AppColor.kBottomNavBarItemColor.withOpacity(.25),
-                  child: const Icon(
-                   FontAwesomeIcons.house,
-                    size: 20,
-                    color: Colors.black,
-                  ),
+                activeIcon: Icon(
+                 FontAwesomeIcons.house,
+                  color: Colors.black,
                 )),
             BottomNavigationBarItem(
-              icon: const Icon(FontAwesomeIcons.bookmark),
+              icon: Icon(FontAwesomeIcons.bookmark),
               label: 'Bookmark',
-              activeIcon: CircleAvatar(
-                backgroundColor:
-                    AppColor.kBottomNavBarItemColor.withOpacity(.25),
-                child: const Icon(
-                  FontAwesomeIcons.solidBookmark,
-                  size: 20,
-                  color: Colors.black,
-                ),
+              activeIcon: Icon(
+                FontAwesomeIcons.solidBookmark,
+                color: Colors.black,
               ),
             ),
             BottomNavigationBarItem(
-              icon: const Icon(FontAwesomeIcons.heart),
+              icon: Icon(FontAwesomeIcons.heart),
               label: 'Favorite',
-              activeIcon: CircleAvatar(
-                backgroundColor:
-                    AppColor.kBottomNavBarItemColor.withOpacity(.25),
-                child: const Icon(
-                  FontAwesomeIcons.solidHeart,
-                  size: 20,
-                  color: Colors.black,
-                ),
+              activeIcon: Icon(
+                FontAwesomeIcons.solidHeart,
+                color: Colors.black,
               ),
             ),
             BottomNavigationBarItem(
-              icon: const Icon(FontAwesomeIcons.plus),
+              icon: Icon(FontAwesomeIcons.plus),
               label: 'Add',
-              activeIcon: CircleAvatar(
-                backgroundColor:
-                    AppColor.kBottomNavBarItemColor.withOpacity(.25),
-                child: const Icon(
-                  FontAwesomeIcons.plus,
-                  size: 20,
-                  color: Colors.black,
-                ),
+              activeIcon: Icon(
+                FontAwesomeIcons.plus,
+                color: Colors.black,
+              ),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(FontAwesomeIcons.gear),
+              label: 'Setting',
+              activeIcon: Icon(
+                FontAwesomeIcons.gear,
+                color: Colors.black,
               ),
             ),
           ],

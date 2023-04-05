@@ -7,7 +7,7 @@ import '../../../data/models/recipe_model.dart';
 class RecipeGrid extends StatelessWidget {
   final List<Recipe> recipes;
 
-  RecipeGrid({required this.recipes});
+  RecipeGrid({required this.recipes,});
 
   @override
   Widget build(BuildContext context) {
@@ -20,15 +20,14 @@ class RecipeGrid extends StatelessWidget {
       itemCount: recipes.length,
       itemBuilder: (BuildContext context, int index) {
         Recipe recipe = recipes[index];
-        return buildGridItem(recipe);
+        return buildGridItem(recipe,context);
       },
     );
   }
 
-  Widget buildGridItem(Recipe recipe) {
+  Widget buildGridItem(Recipe recipe,BuildContext context) {
     return Card(
         elevation: 8,
-        color: AppColor.kTextFiledColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(22),
         ),
@@ -60,7 +59,7 @@ class RecipeGrid extends StatelessWidget {
                             width: 22,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
-                              color: Colors.white,
+                              color: Theme.of(context).scaffoldBackgroundColor,
                             ),
                             child: const InkWell(
                                 child: Icon(

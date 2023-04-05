@@ -3,32 +3,18 @@ import 'package:rcipe_app/core/constant/app_strings.dart';
 import 'package:rcipe_app/presentation/widgets/home/custom_text_field.dart';
 
 import '../../core/dummy.dart';
-import '../../main.dart';
 import '../widgets/home/build_title.dart';
 import '../widgets/home/grid_tile.dart';
 
-class HomeScreen extends StatefulWidget {
+class HomeScreen extends StatelessWidget {
   static const routeName = '/home-screen';
 
   const HomeScreen({Key? key}) : super(key: key);
-
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery
         .of(context)
         .size;
-    // bool _isDarkMode = false;
-    //
-    // @override
-    // void initState() {
-    //   super.initState();
-    //   _isDarkMode = MyApp.isDarkMode;
-    // }
     return Scaffold(
 
       body: Padding(
@@ -37,21 +23,13 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: size.height / 12,
-            ),
-            SwitchListTile(
-              title: const Text('Dark mode'),
-              value: MyApp.isDarkMode,
-              onChanged: (value) {
-                MyApp.isDarkMode = value;
-
-                setState(() { });
-              },
-            ),
+            height: size.height / 12,
+          ),
             Center(
               child: buildTextTitle(AppString.kSearch),
             ),
-            SizedBox(
+
+           SizedBox(
               height: size.height / 20,
             ),
             const Text(AppString.kTitleBar, style: TextStyle(
