@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rcipe_app/core/theme/light_theme.dart';
 import 'package:rcipe_app/presentation/screens/splash_screen.dart';
 
 import 'app_router.dart';
@@ -23,13 +24,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ThemeData lightTheme=
     return ValueListenableBuilder<bool>(
       valueListenable: _isDarkMode,
       builder: (context, isDarkMode, child) {
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'MyApp',
-          theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
+          theme: isDarkMode ? darkTheme :lightTheme ,
           onGenerateRoute: (setting)=>generateRoute(setting),
           home:const SplashView() ,
         );
