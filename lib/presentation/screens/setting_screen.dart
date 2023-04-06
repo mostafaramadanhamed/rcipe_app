@@ -26,7 +26,7 @@ class _SettingScreenState extends State<SettingScreen> {
           Center(child: buildTextTitle(AppString.kSettingTitle)),
           SwitchListTile(
             contentPadding: EdgeInsets.zero,
-            secondary: Icon(FontAwesomeIcons.moon), // add the icon here
+            secondary: const Icon(FontAwesomeIcons.moon), // add the icon here
             value: MyApp.isDarkMode,
             onChanged: (value) {
               MyApp.isDarkMode = value;

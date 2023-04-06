@@ -50,8 +50,8 @@ class _MainScreenState extends State<MainScreen> {
           showSelectedLabels: false,
           showUnselectedLabels: false,
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.grey,
+          // selectedItemColor: Colors.black,
+          // unselectedItemColor: Colors.grey,
           currentIndex: _currentIndex,
           onTap: (int index) {
             setState(() {
@@ -64,14 +64,12 @@ class _MainScreenState extends State<MainScreen> {
                 label: 'Home',
                 activeIcon: Icon(
                  FontAwesomeIcons.house,
-                  color: Colors.black,
                 )),
             BottomNavigationBarItem(
               icon: Icon(FontAwesomeIcons.bookmark),
               label: 'Bookmark',
               activeIcon: Icon(
                 FontAwesomeIcons.solidBookmark,
-                color: Colors.black,
               ),
             ),
             BottomNavigationBarItem(
@@ -79,7 +77,6 @@ class _MainScreenState extends State<MainScreen> {
               label: 'Favorite',
               activeIcon: Icon(
                 FontAwesomeIcons.solidHeart,
-                color: Colors.black,
               ),
             ),
             BottomNavigationBarItem(
@@ -87,7 +84,6 @@ class _MainScreenState extends State<MainScreen> {
               label: 'Add',
               activeIcon: Icon(
                 FontAwesomeIcons.plus,
-                color: Colors.black,
               ),
             ),
             BottomNavigationBarItem(
@@ -95,7 +91,6 @@ class _MainScreenState extends State<MainScreen> {
               label: 'Setting',
               activeIcon: Icon(
                 FontAwesomeIcons.gear,
-                color: Colors.black,
               ),
             ),
           ],
