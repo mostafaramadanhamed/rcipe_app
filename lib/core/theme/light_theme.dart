@@ -4,21 +4,21 @@ import '../constant/app_color.dart';
 
 final ThemeData lightTheme = ThemeData(
   backgroundColor: AppColor.kCategoryColor,
-//  primarySwatch: Colors.blue,
-  cardTheme: CardTheme(
+  cardTheme: const CardTheme(
     color:  AppColor.kTextFiledColor,
-  ),bottomNavigationBarTheme: BottomNavigationBarThemeData(
+  ),bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     selectedItemColor: Colors.black,
+  unselectedItemColor: Colors.grey,
 ),
 
   visualDensity: VisualDensity.adaptivePlatformDensity,
 );
 
 final ThemeData darkTheme = ThemeData.dark().copyWith(
-  cardColor: Colors.black,
+  cardColor: Colors.grey.shade900,
   scaffoldBackgroundColor: Colors.black,
-    backgroundColor: AppColor.kTextInNewColor,
-  bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    backgroundColor: AppColor.kDarkBackgroundColor,
+  bottomNavigationBarTheme: const BottomNavigationBarThemeData(
     selectedItemColor: Colors.white,
     unselectedItemColor: Colors.grey,
   )

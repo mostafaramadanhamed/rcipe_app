@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:rcipe_app/core/constant/app_color.dart';
 import 'package:rcipe_app/presentation/screens/new_recipe_screen.dart';
 import 'package:rcipe_app/presentation/screens/setting_screen.dart';
 
@@ -30,7 +29,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
-          color: AppColor.kBottomNavBarColor,
+          color:Theme.of(context).backgroundColor,
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(25.0),
             topRight: Radius.circular(25.0),
