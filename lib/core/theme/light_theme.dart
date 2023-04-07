@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../constant/app_color.dart';
 
 final ThemeData lightTheme = ThemeData(
+  backgroundColor: AppColor.kCategoryColor,
 //  primarySwatch: Colors.blue,
   cardTheme: CardTheme(
     color:  AppColor.kTextFiledColor,
@@ -16,6 +17,7 @@ final ThemeData lightTheme = ThemeData(
 final ThemeData darkTheme = ThemeData.dark().copyWith(
   cardColor: Colors.black,
   scaffoldBackgroundColor: Colors.black,
+    backgroundColor: AppColor.kTextInNewColor,
   bottomNavigationBarTheme: BottomNavigationBarThemeData(
     selectedItemColor: Colors.white,
     unselectedItemColor: Colors.grey,

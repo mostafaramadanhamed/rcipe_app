@@ -43,6 +43,7 @@ final List<String>titles=[
              // physics: NeverScrollableScrollPhysics(),
               itemCount: 7,
                 itemBuilder: (context,index)=>item(
+                  context: context,
                   image: images[index],
                   title: titles[index],
                 )
@@ -56,19 +57,20 @@ final List<String>titles=[
 Widget item({
   required String title,
   required String image,
+  required BuildContext context,
 })=>Container(
 height:57,
 padding: const EdgeInsets.symmetric(horizontal: 12),
 margin: const EdgeInsets.symmetric(vertical: 8),
 decoration: BoxDecoration(
-boxShadow: const [
+boxShadow:  [
 BoxShadow(
-color: Colors.grey,
-offset: Offset(0,4), //(x,y)
+color: Colors.grey.shade400,
+offset: const Offset(0,4), //(x,y)
 blurRadius: 4.0,
 ),
 ],
-color: AppColor.kCategoryColor,
+color: Theme.of(context).backgroundColor,
 borderRadius: BorderRadius.circular(16)
 ),
 child: Row(
