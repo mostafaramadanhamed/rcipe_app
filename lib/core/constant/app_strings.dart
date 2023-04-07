@@ -15,5 +15,7 @@ class AppString{
   static const kCategorySoups='Soups';
   static const kFavoriteTitle='Favorites';
   static const kSettingTitle='Settings';
+  static const kDarkModeTitle='Dark Mode';
+  static const kDarkModeSubTitle='tab to apply dark and light mode';
   static const kAddRecipeTitle='New Recipe';
 }

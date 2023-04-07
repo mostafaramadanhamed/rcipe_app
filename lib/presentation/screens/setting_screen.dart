@@ -13,7 +13,6 @@ class SettingScreen extends StatefulWidget {
 }
 
 class _SettingScreenState extends State<SettingScreen> {
-  // todo complete setting screen by adding title and7 subTitle to switch
   @override
   Widget build(BuildContext context) {
     final size=MediaQuery.of(context).size;
@@ -26,6 +25,11 @@ class _SettingScreenState extends State<SettingScreen> {
           Center(child: buildTextTitle(AppString.kSettingTitle)),
           SwitchListTile(
             contentPadding: EdgeInsets.zero,
+            title:const Text(AppString.kDarkModeTitle,style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 18,
+            ),),
+            subtitle:const Text(AppString.kDarkModeSubTitle),
             secondary: const Icon(FontAwesomeIcons.moon), // add the icon here
             value: MyApp.isDarkMode,
             onChanged: (value) {
