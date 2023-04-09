@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:rcipe_app/core/constant/app_assets.dart';
+import 'package:rcipe_app/core/constant/app_color.dart';
 import 'package:rcipe_app/presentation/screens/main_screen.dart';
+import 'package:rcipe_app/presentation/widgets/home/build_title.dart';
 import 'package:rive/rive.dart';
 
 import '../../core/constant/animation_enum.dart';
+import '../widgets/home/custom_text_field.dart';
 
 class LoginScreen extends StatefulWidget {
  static const routeName='/login-screen';
@@ -106,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
     controllerSuccess = SimpleAnimation(AnimationEnum.success.name);
     controllerFail = SimpleAnimation(AnimationEnum.fail.name);
 
-    rootBundle.load('assets/images/animated_login_screen.riv').then((data) {
+    rootBundle.load(AppAssets.kLoginRive).then((data) {
       final file = RiveFile.import(data);
       final artboard = file.mainArtboard;
       artboard.addController(controllerHandsDown);
@@ -130,16 +134,18 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffE7F2F7),
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         elevation: 0,
-        title: const Text("Animated login"),
+        titleTextStyle: const TextStyle(color: AppColor.kCursorColor,),
+        title: buildTextTitle('Login',),
         centerTitle: true,
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(
             horizontal: MediaQuery.of(context).size.width / 20),
         child: ListView(
+          physics: const BouncingScrollPhysics(),
           children: [
             Column(
               children: [
@@ -155,6 +161,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         TextFormField(
                           decoration: InputDecoration(
                             labelText: "Email",
+                            labelStyle: const TextStyle(
+                                color: AppColor.kTextFiledBorderColor
+                            ),
+                            focusedBorder: buildBorder(border: 25, color: AppColor.kTextFiledBorderColor),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(25.0),
                             ),
@@ -179,6 +189,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           obscureText: true,
                           decoration: InputDecoration(
                             labelText: "Password",
+                            labelStyle: const TextStyle(
+                              color: AppColor.kTextFiledBorderColor
+                            ),
+                            focusedBorder: buildBorder(border: 25, color: AppColor.kTextFiledBorderColor),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(25.0),
                             ),
@@ -198,7 +212,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: TextButton(
                             style: TextButton.styleFrom(
                               shape: const StadiumBorder(),
-                              backgroundColor: Colors.blue,
+                              backgroundColor: AppColor.kTextFiledBorderColor,
                               padding: const EdgeInsets.symmetric(vertical: 14),
                             ),
                             onPressed: () {

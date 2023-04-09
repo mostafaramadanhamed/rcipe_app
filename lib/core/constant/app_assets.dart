@@ -1,6 +1,7 @@
 class AppAssets{
   static const kSplashBackgroundImage='assets/images/image 8.png';
   static const kSplashImage='assets/images/Ellipse 10.png';
+  static const kLoginRive='assets/images/animated_login_screen.riv';
   static const kBreakfastImage='assets/images/breakfast.png';
   static const kLunchImage='assets/images/lunch.png';
   static const kDrinksImage='assets/images/drinks.png';

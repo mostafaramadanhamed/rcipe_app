@@ -46,15 +46,16 @@ class CustomTextFiled extends StatelessWidget {
     );
   }
 
-  OutlineInputBorder buildBorder({
-    required double border,
-    required Color color,
-  }) {
-    return OutlineInputBorder(
-        borderSide:  BorderSide(
-          color: color,
-        ),
-        borderRadius: BorderRadius.circular(border)
-    );
-  }
+}
+OutlineInputBorder buildBorder({
+  required double border,
+  required Color color,
+}) {
+  return OutlineInputBorder(
+      borderSide:  BorderSide(
+        color: color,
+        width: 2,
+      ),
+      borderRadius: BorderRadius.circular(border)
+  );
 }
