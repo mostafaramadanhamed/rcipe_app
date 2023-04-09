@@ -38,36 +38,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-/*
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  final lightTheme = ThemeData(
-    brightness: Brightness.light,
-    primaryColor: Colors.blue,
-    // other light theme properties
-  );
-
-  final darkTheme = ThemeData(
-    brightness: Brightness.dark,
-    primaryColor: Colors.blue,
-    // other dark theme properties
-  );
-
-  bool _isDarkMode = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'MyApp',
-      theme: _isDarkMode ? darkTheme : lightTheme,
-      home: MyHomePage(),
-    );
-  }
-}
-
- */
