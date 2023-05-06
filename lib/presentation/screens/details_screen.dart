@@ -1,4 +1,3 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -99,7 +98,7 @@ class DetailsScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 11,),
+                  const SizedBox(height: 11,),
                   const Text('Ingredients', style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.purpleAccent),),
 
                   Column(
@@ -120,7 +119,7 @@ class DetailsScreen extends StatelessWidget {
                       );
                     }).toList(),
                   ),
-                  SizedBox(height: 11,),
+                  const SizedBox(height: 11,),
                   const Text('Steps', style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold,color: Colors.lightBlueAccent,),),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
